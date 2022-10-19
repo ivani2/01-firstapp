@@ -21,7 +21,7 @@ function App() {
 
   useEffect(() =>{
     const storedTodos = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY))
-    if( storedTodos.length > 0 ) setTodos(storedTodos)
+    if( storedTodos && storedTodos.length > 0 ) setTodos(storedTodos)
   }, [])
 
   useEffect(() =>{
